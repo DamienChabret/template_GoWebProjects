@@ -34,6 +34,7 @@ func renderTemplates(w http.ResponseWriter, tmpl string) {
 }
 
 func main() {
+	fmt.Println("Démarage du serveur")
 	http.HandleFunc("/", home)
 	http.HandleFunc("/about", about)
 	http.HandleFunc("/project", project)

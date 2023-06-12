@@ -5,22 +5,40 @@ import (
 	"html/template"
 	"net/http"
 	"path/filepath"
+	"portfolio/model"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	renderTemplates(w, "home")
+	names := make(map[string]string)
+	names["owner"] = "damien"
+
+	var listProject = make(map[string]model.Project)
+	var project model.Project
+	project.Name = "projet2"
+	project.Description = "Description du projet"
+	project.Technologies = []string{"C#", "Go"}
+	listProject["0"] = project
+
+	renderTemplates(w, "home", &model.TemplateData{
+		StringData:  names,
+		ListProject: listProject,
+	})
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
-	renderTemplates(w, "about")
+	foo := make(map[string]int)
+	foo["owner"] = 30
+	renderTemplates(w, "about", &model.TemplateData{
+		IntData: foo,
+	})
 }
 
 func Project(w http.ResponseWriter, r *http.Request) {
-	renderTemplates(w, "project")
+	renderTemplates(w, "project", &model.TemplateData{})
 }
 
 func Contact(w http.ResponseWriter, r *http.Request) {
-	renderTemplates(w, "contact")
+	renderTemplates(w, "contact", &model.TemplateData{})
 }
 
 /*
@@ -28,7 +46,7 @@ Charge un template html
 @param http.ResponseWriter ....
 @param string template à prendre en compte
 */
-func renderTemplates(w http.ResponseWriter, tmplName string) {
+func renderTemplates(w http.ResponseWriter, tmplName string, templateData *model.TemplateData) {
 	templateCache, err := createTemplateCache() // Charge le cache
 	if err != nil {
 		panic(err)
@@ -42,7 +60,7 @@ func renderTemplates(w http.ResponseWriter, tmplName string) {
 
 	// Stock tout dans un buffer
 	buffer := new(bytes.Buffer)
-	tmpl.Execute(buffer, nil)
+	tmpl.Execute(buffer, templateData)
 	buffer.WriteTo(w) // permet d'écrire les différents données dans le buffer
 
 }

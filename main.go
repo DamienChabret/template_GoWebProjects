@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"portfolio/handlers"
+	handlers "portfolio/controller"
 )
 
 func main() {

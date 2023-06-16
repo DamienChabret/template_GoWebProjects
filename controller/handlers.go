@@ -8,6 +8,9 @@ import (
 	"portfolio/model"
 )
 
+/*
+Charge le template de l'accueil
+*/
 func Home(w http.ResponseWriter, r *http.Request) {
 	names := make(map[string]string)
 	names["owner"] = "damien"
@@ -25,20 +28,22 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
+/*
+Charge le template "Contact"
+*/
+func Contact(w http.ResponseWriter, r *http.Request) {
+	renderTemplates(w, "contact", &model.TemplateData{})
+}
+
+/*
+Charge le template : "à propros"
+*/
 func About(w http.ResponseWriter, r *http.Request) {
 	foo := make(map[string]int)
 	foo["owner"] = 30
 	renderTemplates(w, "about", &model.TemplateData{
 		IntData: foo,
 	})
-}
-
-func Project(w http.ResponseWriter, r *http.Request) {
-	renderTemplates(w, "project", &model.TemplateData{})
-}
-
-func Contact(w http.ResponseWriter, r *http.Request) {
-	renderTemplates(w, "contact", &model.TemplateData{})
 }
 
 /*

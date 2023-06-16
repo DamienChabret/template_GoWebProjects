@@ -1,4 +1,4 @@
-package model
+package metier
 
 /*
 Structure d'un "PROJET"

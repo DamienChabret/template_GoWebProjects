@@ -13,6 +13,8 @@ var host string          // host (localhost)
 var database_used string // database utilisé
 var port string          // port utilisé
 
+var db *sql.DB
+
 /*
 Créer une connexion à la base de donnée
 */
@@ -23,25 +25,27 @@ func OpenDatabase() {
 
 	// Se connecte à la base de donnée
 	fmt.Println("Ouverture de la connexion")
-	db, err := sql.Open("mysql", user+":"+password+"@("+host+":"+port+")"+"/"+database_used) // "user:password@tcp(host:port)/database"
+	var err error
+	db, err = sql.Open("mysql", user+":"+password+"@("+host+":"+port+")"+"/"+database_used) // "user:password@tcp(host:port)/database"
 	gestionErreur(err)
 
-	defer db.Close()
+	// defer db.Close()
 	fmt.Println("Ouverture de la base de donnée effectué avec succès")
+}
 
-	// REQUETE SQL
-	res, err := db.Query("SHOW TABLES")
-	gestionErreur(err)
-	defer res.Close()
+/*
+Execute une requête SQL sans retourner des données
+*/
+func DatabaseExecute(requete string) {
+	db.Exec(requete)
+}
 
-	// tant qu'il y a des valeurs
-	for res.Next() {
-		var col1 string
-		err := res.Scan(&col1)
-		gestionErreur(err)
-		fmt.Println(col1)
-	}
-
+/*
+Execute une requête SQL qui renvoie des données
+@return *sql.Rows résultat de la requête
+*/
+func DatabaseQuery(requete string) (*sql.Rows, error) {
+	return db.Query(requete)
 }
 
 /* Initie les variables de connexion à la base de donnée */

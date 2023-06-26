@@ -1,7 +1,38 @@
 body {
    background-color: #3e3e42;
+   color :white
 }
 
 h1{
-   color : blue
+   color : red
+}
+
+/* Style de la barre de navigation */
+#navbar{
+   
+
+}
+
+#navbar ul{
+   list-style: none;
+   display: flex;
+   padding : 10px;
+   background-color : rgba(255, 255, 255, 0.3);
+
+   
+}
+
+#navbar a{
+   display : block;
+   padding : 10px;
+   min-width: 120px;
+}
+
+#nom {
+   color : turquoise;
+}
+
+#timide {
+   color : red;
+   float : right;
 }

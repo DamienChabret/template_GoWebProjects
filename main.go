@@ -17,8 +17,7 @@ func main() {
 	http.HandleFunc("/contact", handlers.Contact)
 
 	// Pointe vers le dossier css
-	fs := http.FileServer(http.Dir("Assets"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	http.Handle("/Assets/", http.StripPrefix("/Assets/", http.FileServer(http.Dir("Assets"))))
 
 	http.ListenAndServe(":5500", nil)
 }

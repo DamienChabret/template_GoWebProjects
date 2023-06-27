@@ -51,46 +51,55 @@ h1{
    }
 
    nav {
-      position: relative;
-      height: 60px;
-   }
+  position: relative;
+  height: 60px;
+}
 
-   nav .main_pages {
-       display: none;
-       flex-direction: column;
-       background: black;
-       height: 220px;
-      
-   }
+nav .main_pages {
+  display: none;
+  flex-direction: column;
+  background: black;
+  height: auto; /* Ajuste la hauteur en fonction du contenu */
+  position: absolute;
+  top: 60px; /* Ajustez cette valeur selon votre besoin */
+  left: 0;
+  width: 100%; /* Le menu déroulant occupera toute la largeur de la navbar */
+  padding: 0; /* Supprimez le padding par défaut pour les éléments de liste */
+  margin: 0; /* Supprimez la marge par défaut pour les éléments de liste */
+}
 
-   nav .main_pages a {
-      width: 500%;
-      text-decoration: none;
-      font-style: none;
-      color : white;
-   }
+nav .main_pages a {
+  display: block;
+  text-decoration: none;
+  font-style: none;
+  color: white;
+  padding: 10px; /* Ajoutez un espacement autour des liens pour améliorer la lisibilité */
+  text-align: right; /* Centre les liens à droite */
+  width: 100%; /* Les liens occuperont toute la largeur du menu déroulant */
+  box-sizing: border-box; /* Inclut le padding dans la largeur totale des liens */
+}
 
-   nav .main_pages a:hover {
-      background-color: #3e3e42;
-   }
+nav .main_pages a:hover {
+  background-color: #3e3e42;
+}
 
-   label {
-       width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       margin: 0 auto;
-       font-size: 40px;
-       color: white;
-       cursor: pointer;
-       background-color: black;
-   }
+label {
+  position: relative; /* Ajoutez cette ligne pour créer un contexte d'empilement pour le texte */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+}
 
-   #toggle:checked + .main_pages {
-      display: flex;      
-      list-style-type: none;
-      text-align: right;
-   }
+#toggle:checked + .main_pages {
+  display: flex;
+}
+
 }
 
 /** fun **/

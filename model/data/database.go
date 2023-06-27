@@ -48,12 +48,16 @@ func DatabaseQuery(requete string) (*sql.Rows, error) {
 	return db.Query(requete)
 }
 
+func initDatabase() {
+
+}
+
 /* Initie les variables de connexion à la base de donnée */
 func initVar() {
 	user = "root"
 	password = ""
 	host = "localhost"
-	database_used = "taskstep" // portfolioDB
+	database_used = "mysql" // portfolioDB
 	port = "3306"
 
 }

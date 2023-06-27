@@ -8,8 +8,7 @@ CREATE TABLE Projet (
    languagesProjet TEXT, 
    competencesProjet TEXT, 
    outilsProjet TEXT, 
-   lienProjet TEXT
-   );
+   lienProjet TEXT);
 
 CREATE TABLE Experiences (
    idExperience int primary key auto_increment, 
@@ -28,5 +27,4 @@ CREATE TABLE Formations (
 
 CREATE TABLE Competences (
    idCompetence int primary key auto_increment, 
-   nomCompetence varchar(255)
-   );
+   nomCompetence varchar(255));

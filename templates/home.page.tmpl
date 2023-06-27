@@ -14,8 +14,12 @@
         {{ template "base" . }} <!-- Utilise le template -->
         {{ define "content" }} <!-- précise que cette page est le "content" -->
 
-        <h1 id="mainTitle"> DAMIEN CHABRET </h1>
-        <p id="context"> Bienvenue sur ma page portfolio. Vous pourrez découvrir ici qui je suis, entrez dans mon monde ! </p>
+        <div id="background"></div>
+
+        <div id="mainInformation">
+            <h1> DAMIEN CHABRET </h1>
+            <p> Bienvenue sur ma page portfolio. Vous pourrez découvrir ici qui je suis, entrez dans mon monde ! </p>
+        </div>
 
         {{ end }}
     </body>

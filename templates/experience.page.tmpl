@@ -1,7 +1,23 @@
-{{ template "base" . }} <!-- Utilise le template -->
 
-{{ define "content" }} <!-- précise que cette page est le "content" -->
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Assets/css/style.css">
+        <script src="https://kit.fontawesome.com/852c895433.js" crossorigin="anonymous"></script>
+    
+        <title> Damien Chabret </title>
+    </head>
 
-<h1> Experiences </h1>
+    <body>
+        {{ template "base" . }} <!-- Utilise le template -->
 
-{{ end }}
+        {{ define "content" }} <!-- précise que cette page est le "content" -->
+        
+        <h1> Experiences </h1>
+        
+        {{ end }}
+        
+    </body>
+</html>

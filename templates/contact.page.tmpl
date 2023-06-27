@@ -1,20 +1,39 @@
-{{ template "base" . }} <!-- Utilise le template -->
 
-{{ define "content" }} <!-- précise que cette page est le "content" -->
 
-<h1> Contact </h1>
 
-<form method="POST">
-   <label for="mail"> Mail : </label><br>
-   <input type="text" id="mail" name="mail"> <br><br>
 
-   <label for="objet"> Objet : </label><br>
-   <input type="text" id="objet" name="objet"> <br><br>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Assets/css/style.css">
+        <script src="https://kit.fontawesome.com/852c895433.js" crossorigin="anonymous"></script>
+    
+        <title> Damien Chabret </title>
+    </head>
 
-   <label for="message"> Message : </label> <br>
-   <input type="text" id="message" name="message"> <br><br>
+    <body>
+      {{ template "base" . }} <!-- Utilise le template -->
 
-   <input type="submit" id="submit" name="submit">
-</form>
+      {{ define "content" }} <!-- précise que cette page est le "content" -->
 
-{{ end }}
+      <h1> Contact </h1>
+
+      <form method="POST">
+         <label for="mail"> Mail : </label><br>
+         <input type="text" id="mail" name="mail"> <br><br>
+
+         <label for="objet"> Objet : </label><br>
+         <input type="text" id="objet" name="objet"> <br><br>
+
+         <label for="message"> Message : </label> <br>
+         <input type="text" id="message" name="message"> <br><br>
+
+         <input type="submit" id="submit" name="submit">
+      </form>
+
+      {{ end }}
+        
+    </body>
+</html>

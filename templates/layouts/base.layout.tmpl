@@ -8,13 +8,14 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/Assets/css/style.css">
+   <script src="https://kit.fontawesome.com/852c895433.js" crossorigin="anonymous"></script>
 
    <title> Damien Chabret </title>
 </head>
 
 <body>
 
-   
+   <!-- barre de navigation -->
    <nav id="navbar">
       <label for="toggle" id="navbarMobile">☰</label>
       <input type="checkbox" id="toggle"> 
@@ -27,11 +28,23 @@
          <li> <a href="/contact"> Contact </a></li>
       </ul>
    </nav>
-
+   
+   
    <!-- Permet de récupérer le contenu envoyé -->
    {{ block "content" . }}
 
    {{ end }}
+
+   <!-- bas de page -->
+   <footer>
+      <ul>
+         <li class="network" alt="Linkedln"><a href="https://github.com/DamienChabret" target="_blank"> <i class="fa-brands fa-github fa-2xl" ></i> </a></li>
+         <li class="network" alt="Mahara"> <a href="https://www.linkedin.com/in/damienchabret/" target="_blank"> <i class="fa-brands fa-linkedin fa-2xl" ></i> </a> </li>
+         <li class="network" alt="Discord"> <a href="#"> <i class="fa-brands fa-discord fa-2xl" style="color: #ffffff;"></i> </a></li>
+      </ul>
+      <p id="copyright"> © Damien.C</p>
+   </footer>
+   
 
 </body>
 </html>

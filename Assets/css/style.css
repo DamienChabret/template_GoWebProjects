@@ -1,10 +1,46 @@
+/* body */
 body {
-   background-color: #3e3e42;
-   color :white
+   margin : 0; /* Enlève espacement sur coté */
+   color :black;
+   background-color: white;
 }
 
-h1{
-   color : red
+/* footer */
+footer{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   color : white;
+   background-color: #3e3e42;
+}
+
+footer ul {
+   padding:0;
+   list-style:none;
+   text-align:center;
+   font-size:18px;
+   line-height:1.6;
+   margin-bottom:0;
+}
+
+footer ul a {
+   color:inherit;
+   text-decoration:none;
+   opacity:0.8;
+   padding : 10px
+}
+
+footer ul li{
+   display: inline;
+}
+
+#copyright{
+   text-align: center;
+   color : rgb(176, 176, 176);
+}
+
+.network:hover{
+   zoom:150%;
 }
 
 /* Format plein écran */
@@ -16,7 +52,6 @@ h1{
 
    #navbar{
       vertical-align: top;
-   
    }
    
    #navbar ul{
@@ -26,88 +61,83 @@ h1{
       display: flex;
       justify-content: flex-end;
       padding : 10px;
-      background-color : rgba(255, 255, 255, 0.3);
+      background-color : rgba(0, 0, 0, 0.8);
       
    }
    
    #navbar a{
       display : block;
       padding : 10px;
+      text-align: center;
+      width: 100px;
       min-width: 20px;
       text-decoration: none;
-      color : black;
+      color : white;
    }
 
    #navbar a:hover{
-      background-color: white;
+      background-color: rgb(253, 253, 253);
+      color : rgb(0, 0, 0);
    }
 }
 
 
 /* Format mobile */
 @media (max-width: 480px){
-   #toggle{
+   #toggle {
       display: none;
    }
 
    nav {
-  position: relative;
-  height: 60px;
+      position: relative;
+      height: 60px;
+   }
+
+   nav .main_pages {
+      display: none;
+      flex-direction: column;
+      background: black;
+      height: auto; 
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      width: 100%; 
+      padding: 0; 
+      margin: 0; 
+   }
+
+   nav .main_pages a {
+      display: block;
+      text-decoration: none;
+      font-style: none;
+      color: white;
+      padding: 10px; 
+      text-align: center; 
+      width: 100%; 
+      box-sizing: border-box; 
+   }
+
+   nav .main_pages a:hover {
+      background-color: #3e3e42;
+   }
+
+   label {
+      position: relative; 
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      background-color: black;
+   }
+
+   #toggle:checked + .main_pages {
+      display: flex;
+   }
+
 }
 
-nav .main_pages {
-  display: none;
-  flex-direction: column;
-  background: black;
-  height: auto; /* Ajuste la hauteur en fonction du contenu */
-  position: absolute;
-  top: 60px; /* Ajustez cette valeur selon votre besoin */
-  left: 0;
-  width: 100%; /* Le menu déroulant occupera toute la largeur de la navbar */
-  padding: 0; /* Supprimez le padding par défaut pour les éléments de liste */
-  margin: 0; /* Supprimez la marge par défaut pour les éléments de liste */
-}
 
-nav .main_pages a {
-  display: block;
-  text-decoration: none;
-  font-style: none;
-  color: white;
-  padding: 10px; /* Ajoutez un espacement autour des liens pour améliorer la lisibilité */
-  text-align: right; /* Centre les liens à droite */
-  width: 100%; /* Les liens occuperont toute la largeur du menu déroulant */
-  box-sizing: border-box; /* Inclut le padding dans la largeur totale des liens */
-}
-
-nav .main_pages a:hover {
-  background-color: #3e3e42;
-}
-
-label {
-  position: relative; /* Ajoutez cette ligne pour créer un contexte d'empilement pour le texte */
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-  background-color: black;
-}
-
-#toggle:checked + .main_pages {
-  display: flex;
-}
-
-}
-
-/** fun **/
-#nom {
-   color : turquoise;
-}
-
-#timide {
-   color : red;
-   float : right;
-}

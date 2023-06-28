@@ -9,7 +9,7 @@ import (
 func main() {
 	fmt.Println("Démarage du serveur")
 	// Pointe vers les dossiers
-	http.HandleFunc("/", handlers.Home)
+	http.HandleFunc("", handlers.Home)
 	http.HandleFunc("/me", handlers.Me)
 	http.HandleFunc("/experiences", handlers.Experience)
 	http.HandleFunc("/formation", handlers.Formation)

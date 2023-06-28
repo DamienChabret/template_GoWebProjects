@@ -1,0 +1,73 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+ 
+ 
+
+h1{
+  text-align: center;
+  font-size: 100px;
+}
+
+/* DIV ENTIER */
+#screen{
+    background-color: #2D0922;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+   
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+    height: 400px;
+    width: 900px;
+    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Haut de la div */
+#header{
+    background-color: #4D4D4F;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#header-right{
+    list-style-type: none;
+    display: flex;
+    margin-left: -20px;
+}
+
+#header-right li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#header-left{
+    list-style: none;
+}
+
+/* bas de la div */
+#divForm{
+    color: white;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+}
+
+#divForm form{
+    margin: 10px;
+}
+
+#divForm #contact{
+    margin: 10px;
+}

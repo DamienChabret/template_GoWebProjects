@@ -50,3 +50,7 @@ body{
     right: 0; /* Positionne la navbar à l'extrémité droite */
     z-index: 9999; /* Définit une valeur de z-index élevée pour s'assurer qu'elle est au-dessus des autres éléments */
 }
+
+#navbar a{
+    color: white;
+}

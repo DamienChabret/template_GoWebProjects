@@ -1,7 +1,7 @@
 /* body */
 body {
    margin : 0; /* Enlève espacement sur coté */
-   color :rgb(255, 255, 255);
+   color :rgb(0, 0, 0);
    background-color: white;
    font-family: 'Raleway', sans-serif;
 }
@@ -75,7 +75,7 @@ footer ul li{
       width: 100px;
       min-width: 20px;
       text-decoration: none;
-      color : rgb(255, 255, 255);
+      color : black;
    }
 
    #navbar a:hover{

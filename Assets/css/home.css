@@ -43,14 +43,6 @@ body{
     font-size: 20px;
     padding-top: -100px;
 }
-
-#navbar{
-    position: fixed; /* Fixe la position de la navbar */
-    top: 0; /* Place la navbar en haut de la page */
-    right: 0; /* Positionne la navbar à l'extrémité droite */
-    z-index: 9999; /* Définit une valeur de z-index élevée pour s'assurer qu'elle est au-dessus des autres éléments */
-}
-
 #navbar a{
     color: white;
 }

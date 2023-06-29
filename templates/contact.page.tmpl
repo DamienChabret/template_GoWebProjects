@@ -19,50 +19,44 @@
 
       {{ define "content" }} <!-- précise que cette page est le "content" -->
 
-      <h1> Contact </h1>
-      
-      <div id="screen">
-        <div id="header">
-          <ul id="header-right">
-            <li> <i class="fa-solid fa-circle fa-xs" style="color: #d60a0a;"></i></li>
-            <li> <i class="fa-solid fa-circle fa-xs" style="color: #ffdf0f;"></i></li>
-            <li> <i class="fa-solid fa-circle fa-xs" style="color: #63db00;"></i></li>
-          </ul>
-          <ul id="header-left"> 
-            <li> </li>
-          </ul>
-        </div>
-        <div id="divForm">
-          <!-- Information de contact -->
-          <div id="contact">
-            <p> N'hesitez pas à me contacter au : </p>
-            <ul>
-              <li> <a> damienchab.p@gmail.com </a></li>
-              <li> <a> 06.61.78.26.12 </a></li>
-            </ul>
-          </div>
-  
-          <!-- Formulaire -->
-          <form method="POST">
-              <!-- Information de contact -->
-              <div id="information">
-                <input type="text" id="nom" name="nom" placeholder="Nom ..."> 
-        
-                <input type="text" id="mail" name="mail" placeholder="Mail ..."> <br><br>
-              </div>
-  
-              <!-- Objet du context -->
-              <input type="text" id="objet" name="objet" placeholder="Objet ..."> <br><br>
-  
-              <!-- Message -->
-              <textarea id="message" placeholder="Message ..."></textarea> <br><br>
-  
-              <!-- submit -->
-              <input type="submit" id="submit" name="submit">
-            
-          </form>
-        </div>
+<div id="screen">
+  <!-- Formulaire -->
+  <form method="POST">
+    <h1> Contact </h1>
+    
+    <!-- nom et mail -->
+    <div id="information">
+      <div id="div-nom" class="uiForm">
+        <label for="nom">
+          <i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i>
+        </label>
+        <input class="form-content" type="text" id="nom" name="nom" placeholder="Nom">
       </div>
+      <div id="div-mail" class="uiForm">
+        <label for="mail">
+          <i class="fa-solid fa-envelope fa-xl" style="color: #ffffff;"></i>
+        </label>
+        <input class="form-content" type="text" id="mail" name="mail" placeholder="Mail">
+      </div>
+    </div>
+
+    <!-- Objet du context -->
+    <div id="div-objet" class="uiForm">
+      <label for="objet">
+        <i class="fa-solid fa-link fa-xl" style="color: #ffffff;"></i>
+      </label>
+      <input class="form-content" type="text" id="objet" name="objet" placeholder="Objet">
+    </div>
+
+    <!-- Message -->
+    <div id="div-message" class="uiForm">
+      <textarea class="form-content" id="message" placeholder="Message"></textarea>
+    </div>
+
+    <!-- submit -->
+    <input class="uiForm" type="submit" id="submit" name="submit">
+  </form>
+</div>
       {{ end }}
         
     </body>

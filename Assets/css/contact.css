@@ -4,16 +4,33 @@
     -moz-osx-font-smoothing: grayscale;
   }
  
- 
 
-h1{
-  text-align: center;
-  font-size: 100px;
+body{
+    background-image: url(../images/pexels-brady-knoll-5409751\ \(1\).jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ 
+#navbar a{
+    color: white;
 }
 
-/* DIV ENTIER */
-#screen{
-    background-color: #2D0922;
+form h1{
+  text-align: center;
+  font-size: 100px;
+  color : white;
+}
+
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+   
+  }
+  
+  /* Conteneur principal */
+  #screen {
+    background-color: #3c3d3ab5;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -22,52 +39,117 @@ h1{
     -webkit-transform: translate(-50%, -50%);
 
     border-radius: 20px;
-    height: 400px;
+    height: 750px;
     width: 900px;
     
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+  }
+
+  #screen  form{ 
+    position: absolute;
+    width: 800px;
+    left: 50%;
+    top: 50%;
+   
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
-/* Haut de la div */
-#header{
-    background-color: #4D4D4F;
-    height: 35px;
+  /* Icônes */
+  .fa-solid {
+    display: inline-block;
+    vertical-align: middle;
+    left: 1.5rem;
+    top: 2rem;
+    margin-top: 7px;
+    margin-left: 10px;
+  }
+  
+  .uiForm {
+    display: flex;
+    align-items: center;
+    background-color: #3C3D3A;
+    border : 3px solid rgba(255, 255, 255, 0.279);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    caret-color: white;
+    
+  }
+
+  /* Champs "Nom" et "Mail" */
+  .uiForm #nom,
+  .uiForm #mail {
+    flex: 1;
+    margin-right: 5px;
+  }
+
+  /* Style des icônes */
+  .uiForm i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+
+  .uiForm:hover{
+    background-color: rgb(92, 92, 92);
+  }
+
+  .uiForm:hover ::placeholder{
+    color : white;
+  }
+
+  /* Labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  /* Champs de saisie */
+  .form-content {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+  }
+
+  .form-content:focus {
+    outline: none;
+  }
+
+  /* Bouton Envoyer */
+  #submit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #1E1E1D;
+    align-items: center;
+  }
+
+  #submit:hover{
+    background-color: #0F0F0F;
+  }
+
+  #message {
+    background-color: transparent;
+    border: none;
+    height: 300px;
+    resize: none;
+  }
+
+  #information {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-#header-right{
-    list-style-type: none;
-    display: flex;
-    margin-left: -20px;
-}
-
-#header-right li{
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-#header-left{
-    list-style: none;
-}
-
-/* bas de la div */
-#divForm{
-    color: white;
-    margin: 10px;
-    text-align: center;
-    display: flex;
-}
-
-#divForm form{
-    margin: 10px;
-}
-
-#divForm #contact{
-    margin: 10px;
-}
+  }
+  
+  #information > * {
+    flex-basis: 49%; /* Les éléments prennent 50% de l'espace */
+  }
